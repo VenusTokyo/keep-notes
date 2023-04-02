@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,17 +8,42 @@
     <link rel="stylesheet" href="notesApp.css">
     <title>My Notes App</title>
 </head>
+
 <body>
     <div class="container">
-        <div id="input-box">
-            <input id="add-title" type="text" placeholder="Title">
-            <textarea id="add-text" name="" id="" cols="30" rows="10" placeholder="Take a note..."></textarea>
-            <button id="add-note">Add</button>
+        <div class="nav">
+            <button onclick=NotesSection()>My Notes</button>
+            <button onclick=deletedSection()>Deleted Notes</button>
+            <button onclick=archivedSection()>Archived Notes</button>
         </div>
-        <div id="notes">
+        <div class="add-note-section">
             
+            <h1 class="heading">Add Note</h1>
+            <div id="input-box">
+                <input id="add-title" type="text" placeholder="Title">
+                <textarea id="add-text" name="" id="" cols="30" rows="10" placeholder="Take a note..."></textarea>
+                <button id="add-note">Add</button>
+            </div>
+            <div id="notes">
+
+            </div>
+        </div>
+        <div class="deleted-note-section disabled">
+            <h1 class="heading">Deleted Notes</h1>
+
+            <div id="deleted-notes">
+                
+            </div>
+        </div>
+        <div class="archived-note-section disabled">
+            <h1 class="heading">Archived Notes</h1>
+
+            <div id="archived-notes">
+                
+            </div>
         </div>
         <script src="notesApp.js"></script>
     </div>
 </body>
+
 </html>
